@@ -9,10 +9,10 @@
                 @include('admin.layout.navbar')
                 <div class="main-panel">
                     @yield('content')
-                    @include('admin.layout.footer')
                 </div>
             </div>
         </div>
+        @include('admin.layout.footer')
         @include('admin.layout.script')
     </body>
 </html>

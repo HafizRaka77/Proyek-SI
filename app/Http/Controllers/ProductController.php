@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Storage;
 class ProductController extends Controller {
 
     public function index() {
-        $product = Product::all();
-        return view('product.index', [
-            'title' => 'Product',
+        $product = Product::paginate(10);
+        return view('admin.pages.product.index', [
+            // 'title' => 'Product',
             'data' => $product
         ]);
     }
