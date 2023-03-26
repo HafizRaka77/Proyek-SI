@@ -1,8 +1,8 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-        <a class="sidebar-brand brand-logo" href="index.html"><img src="{{ asset('images/logo.svg') }}"
+        <a class="sidebar-brand brand-logo" href="{{ route('admin.dashboard') }}"><img src="{{ asset('images/logo.svg') }}"
                 alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="{{ asset('images/logo-mini.svg') }}"
+        <a class="sidebar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}"><img src="{{ asset('images/logo-mini.svg') }}"
                 alt="logo" /></a>
     </div>
     <ul class="nav">
@@ -58,11 +58,11 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('admin.dashboard') }}">
+            <a class="nav-link" href="{{ route('product.index') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi mdi-package-variant-closed"></i>
                 </span>
-                <span class="menu-title">Products</span>
+                <span class="menu-title">Produk</span>
             </a>
         </li>
         <li class="nav-item menu-items">
@@ -70,7 +70,7 @@
                 <span class="menu-icon">
                     <i class="mdi mdi mdi-account"></i>
                 </span>
-                <span class="menu-title">Account Management</span>
+                <span class="menu-title">Manajemen Akun</span>
             </a>
         </li>
         <li class="nav-item menu-items">

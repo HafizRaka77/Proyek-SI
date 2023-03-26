@@ -31,6 +31,6 @@ class Product extends Model {
     ];
 
     public function getRouteKeyName() {
-        return 'uuid';
+        return 'id';
     }
 }
