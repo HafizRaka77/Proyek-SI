@@ -23,7 +23,7 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'loginIndex'])->name('auth.login.page');
 Route::get('/register', [AuthController::class, 'registerIndex'])->name('auth.register.page');
 
-Route::prefix('admin')->group(function () {
+Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
     Route::controller(ProductController::class)->group(function () {
         Route::get('/product/index', 'index')->name('product.index');

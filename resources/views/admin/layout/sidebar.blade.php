@@ -2,8 +2,8 @@
     <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
         <a class="sidebar-brand brand-logo" href="{{ route('admin.dashboard') }}"><img src="{{ asset('images/logo.svg') }}"
                 alt="logo" /></a>
-        <a class="sidebar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}"><img src="{{ asset('images/logo-mini.svg') }}"
-                alt="logo" /></a>
+        <a class="sidebar-brand brand-logo-mini" href="{{ route('admin.dashboard') }}"><img
+                src="{{ asset('images/logo-mini.svg') }}" alt="logo" /></a>
     </div>
     <ul class="nav">
         <li class="nav-item profile">
@@ -82,7 +82,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link" href="#exampleModal">
                 <span class="menu-icon">
                     <i class="mdi mdi mdi-logout-variant"></i>
                 </span>
@@ -91,3 +91,25 @@
         </li>
     </ul>
 </nav>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Konfirmasi Logout</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Apakah anda yakin untuk logout?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <form action="/logout" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Logout</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

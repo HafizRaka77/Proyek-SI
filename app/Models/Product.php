@@ -10,7 +10,7 @@ class Product extends Model {
     use UUID;
 
     protected $table = 'products';
-    protected $guarded = ['uuid'];
+    protected $guarded = ['id'];
     protected $fillable = [
         'title',
         'price',
