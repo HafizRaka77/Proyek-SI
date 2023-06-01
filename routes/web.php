@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ Route::get('/', function () {
 
 Route::get('/login', [AuthController::class, 'loginIndex'])->name('auth.login.page');
 Route::get('/register', [AuthController::class, 'registerIndex'])->name('auth.register.page');
+route::get('/home',[HomeController::class,'index']);
+Route::get('/allproduct',[HomeController::class, 'allproduct']);
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
