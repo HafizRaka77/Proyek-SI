@@ -51,7 +51,7 @@ https://templatemo.com/tm-546-sixteen-clothing
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href="{{url('home')}}">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
@@ -108,11 +108,11 @@ https://templatemo.com/tm-546-sixteen-clothing
           
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img height="250" width="200" src="/storage/product-image/{{$product->image}}" alt=""></a>
+              <a href="#"><img height="250" width="200" src="{{ asset('storage/' . $product->image) }}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>{{$product->title}}</h4></a>
                 <h6>Rp. {{$product->price}}</h6>
-                <p>{{$product->desc}}</p>
+                <p>{!! $product->desc !!}</p>
 
                 
                 

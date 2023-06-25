@@ -9,6 +9,7 @@ class UserController extends Controller
 {
     public function index() {
         $products = Product::where('is_deleted', false)->orderBy('title')->paginate(10);
+        dd($product);
         return $products;
     }
 

@@ -4,7 +4,7 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Latest Products</h2>
-              <a href="products.html">view all products <i class="fa fa-angle-right"></i></a>
+              <a href="{{route('all-product')}}">view all products <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
           
@@ -12,11 +12,11 @@
 
           <div class="col-md-4">
             <div class="product-item">
-              <a href="#"><img height="300" width="150" src="/storage/product-image/{{$product->image}}" alt=""></a>
+              <a href="#"><img height="300" width="150" src="{{ asset('storage/' . $product->image) }}" alt=""></a>
               <div class="down-content">
                 <a href="#"><h4>{{$product->title}}</h4></a>
                 <h6>Rp.{{$product->price}}</h6>
-                <p>{{$product->desc}}</p>
+                <p>{!! $product->desc !!}</p>
                 
               </div>
             </div>
